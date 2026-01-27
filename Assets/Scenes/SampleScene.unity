@@ -2572,8 +2572,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2041687298}
         m_TargetAssemblyTypeName: ToggleScript, Assembly-CSharp
-        m_MethodName: ToggleBean
-        m_Mode: 0
+        m_MethodName: toRight
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2885,8 +2885,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2041687298}
         m_TargetAssemblyTypeName: ToggleScript, Assembly-CSharp
-        m_MethodName: ToggleBean
-        m_Mode: 0
+        m_MethodName: toLeft
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3822,6 +3822,8 @@ MonoBehaviour:
   teddy: {fileID: 193560036}
   car: {fileID: 562448576}
   granny: {fileID: 457675369}
+  toggleLeft: {fileID: 1340298457}
+  toggleRight: {fileID: 1148272885}
 --- !u!1 &2112181153
 GameObject:
   m_ObjectHideFlags: 0
