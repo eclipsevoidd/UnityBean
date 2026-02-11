@@ -18,7 +18,7 @@ public class DragScript : MonoBehaviour,
     public void OnPointerDown(PointerEventData data)
     {
         Debug.Log("Izdarīts klikšķis uz velkamā objekta");
-        sfxScript.PlaySFX(0);
+        sfxScript.PlaySFX(2);
     }
 
     public void OnBeginDrag(PointerEventData data)
