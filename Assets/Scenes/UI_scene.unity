@@ -1251,7 +1251,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1483694361}
@@ -1300,7 +1300,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 282163f39562a8243b83f6edcf0348f7, type: 3}
+  m_Sprite: {fileID: -7902904074587302849, guid: 6ae9e6a7100af6b4ab492634e83d5fb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1345,8 +1345,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.9}
-  m_Size: {x: 7.8, y: 12.64}
+  m_Offset: {x: 0, y: 1.99}
+  m_Size: {x: 1.6, y: 3.9}
   m_Direction: 0
 --- !u!1 &449036796
 GameObject:
@@ -3830,7 +3830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00024912934, y: 677.0006}
+  m_AnchoredPosition: {x: -0.00024912934, y: 677}
   m_SizeDelta: {x: 0, y: 910}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1188611152
@@ -5238,6 +5238,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 80eaadda9cae9d24a81c492ca2a174c0, type: 3}
   - {fileID: 8300000, guid: 5917bfca48068094e9b4e86ab28ea974, type: 3}
   - {fileID: 8300000, guid: 1181c245fdfbe3c47b56420e17f4a8fb, type: 3}
+  - {fileID: 8300000, guid: cc9887e1d4956fb4caa644dc80710044, type: 3}
+  - {fileID: 8300000, guid: 28134c9957b4d184ead5db39bbe966a0, type: 3}
 --- !u!114 &1404638845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6103,7 +6105,7 @@ Transform:
   m_GameObject: {fileID: 1483694360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.969, y: -4.523, z: 0}
+  m_LocalPosition: {x: 3.969, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6144,8 +6146,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.1, y: 0.27}
-  m_Radius: 0.2
+  m_Offset: {x: -0.01, y: 0.77}
+  m_Radius: 0.17
 --- !u!50 &1483694363
 Rigidbody2D:
   serializedVersion: 5
@@ -6745,8 +6747,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672490205}
   m_HandleRect: {fileID: 1672490204}
   m_Direction: 2
-  m_Value: -0.0000008564756
-  m_Size: 0.25602984
+  m_Value: 0.000000045077662
+  m_Size: 0.25603426
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
