@@ -14,10 +14,10 @@ public class DonutBakerScript : MonoBehaviour
     public Button bakeButton;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI livesText; // PIEVIENOTS: Dzīvību tekstam
+    public TextMeshProUGUI livesText;
 
     [Header("Game Settings")]
-    public int lives = 3; // PIEVIENOTS: Sākuma dzīvības
+    public int lives = 3;
     public float timeRemaining = 60f;
     private int score = 0;
     private bool isGameRunning = false;
@@ -25,7 +25,6 @@ public class DonutBakerScript : MonoBehaviour
 
     void Start()
     {
-        // Paslēpjam UI sākumā
         if (scoreText != null) scoreText.gameObject.SetActive(false);
         if (timerText != null) timerText.gameObject.SetActive(false);
         if (livesText != null) livesText.gameObject.SetActive(false);
@@ -58,8 +57,6 @@ public class DonutBakerScript : MonoBehaviour
         score += amount;
         if (scoreText != null) scoreText.text = "Punkti: " + score;
     }
-
-    // JAUNA FUNKCIJA: Dzīvību zaudēšanai
     public void LoseLife()
     {
         lives--;
@@ -78,7 +75,7 @@ public class DonutBakerScript : MonoBehaviour
             isGameRunning = true;
             timeRemaining = 60f;
             score = 0;
-            lives = 3; // Atiestatām dzīvības
+            lives = 3;
 
             AddScore(0);
             if (livesText != null) livesText.text = "Dzīvības: " + lives;
@@ -98,7 +95,7 @@ public class DonutBakerScript : MonoBehaviour
         if (bakingCoroutine != null) StopCoroutine(bakingCoroutine);
         if (timerText != null) timerText.text = message;
 
-        // Atrodam tēlu un atiestatām tā izmēru
+        // atrodam beanu un resettojam viņa izmēru
         CharacterControllerScript player = FindFirstObjectByType<CharacterControllerScript>();
         if (player != null)
         {

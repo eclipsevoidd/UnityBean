@@ -8,7 +8,7 @@ public class CharacterControllerScript : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private float moveInput;
-    private Vector3 initialScale; // Mainīgais sākuma izmēram
+    private Vector3 initialScale;
 
     void Start()
     {
@@ -16,15 +16,12 @@ public class CharacterControllerScript : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-        // Saglabājam izmēru, kāds tēlam ir pašā spēles sākumā
         initialScale = transform.localScale;
     }
 
-    // Funkcija, ko izsauksim no DonutBakerScript
     public void ResetSize()
     {
         transform.localScale = initialScale;
-        // Ja vēlies atiestatīt arī masu, ja to mainīji:
         if (rb != null) rb.mass = 1f;
     }
 

@@ -1,12 +1,12 @@
 using UnityEngine;
-using TMPro; // Nepieciešams TextMeshPro tekstam
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Spēles rādītāji")]
+    [Header("stati")]
     public int score = 0;
     public int lives = 3;
     public float timeRemaining = 60f;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         if (lives <= 0) GameOver();
     }
 
-    void UpdateUI()
+    void UpdateUI() // autofill kods
     {
         scoreText.text = $"Punkti: {score}";
         livesText.text = $"Dzīvības: {lives}";
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         isGameOver = true;
-        Time.timeScale = 0; // Apstādina spēli
+        Time.timeScale = 0;
         if(gameOverPanel != null) gameOverPanel.SetActive(true);
     }
 

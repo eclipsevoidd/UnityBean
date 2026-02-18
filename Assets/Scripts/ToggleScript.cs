@@ -31,7 +31,6 @@ public class ToggleScript : MonoBehaviour
         bean.transform.localScale = new Vector2(-1, 1);
     }
 */
-    // Realizēt ToggleFlip metodi, kas apvieno ToLeft un ToRight
     public void ToggleFlip(int x)
     {
         bean.transform.localScale = new Vector2(x, 1);

@@ -20,7 +20,6 @@ public class ObjectCatchScript : MonoBehaviour
         if (collision.transform.IsChildOf(transform))
             return;
 
-        // 1. JA NOĶERTS LABAIS VIRTULIS
         if (collision.CompareTag("Donut"))
         {
             if (sfx != null) sfx.PlaySFX(4);
@@ -32,26 +31,22 @@ public class ObjectCatchScript : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            // Augšanas loģika
             transform.localScale += new Vector3(sizeIncrease, sizeIncrease, 0);
             rb.mass += massIncrease;
         }
 
-        // 2. JA NOĶERTS SLIKTAIS VIRTULIS (BadDonut)
         else if (collision.CompareTag("Danger"))
         {
-            // Pieņemot, ka tev ir SFX priekš kļūdas, piemēram, indekss 5
             if (sfx != null) sfx.PlaySFX(5);
 
             if (baker != null)
             {
-                baker.LoseLife(); // Atņem dzīvību
+                baker.LoseLife();
             }
 
             Destroy(collision.gameObject);
 
-            // OPTIONĀLI: Saraušanās loģika (pretēji augšanai)
-            if (transform.localScale.x > 1.0f) // Neļaujam kļūt mazākam par sākuma izmēru
+            if (transform.localScale.x > 1.0f)
             {
                 transform.localScale -= new Vector3(sizeIncrease, sizeIncrease, 0);
                 rb.mass -= massIncrease;
