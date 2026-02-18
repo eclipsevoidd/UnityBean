@@ -1,17 +1,16 @@
-# Unity_bean
-Testa projekts, kas demonstrē Unity UI elementu lietojumu par tēmu "MR. Bīns"
+# 🍩 Unity Bean: Virtuļu Spēle
 
-**Darāmo darbu saraksts:**
-- [x] UI Button lietojums
-- [x] UI Input field lietojums
-- [x] UI Text lietojums
-- [x] UI Image lietojums
-- [x] UI radio button lietojums
-- [x] UI slider lietojums
-- [x] Drag and drop funkcionalitāte
-- [x] Audio source lietojums
-- [x] Riggid body un collider lietojums
-- [x] Projekta sagatavošana Windows OS
-- [ ] Izveidot galvenās izvēlnes ainu (paši)
-- [ ] Izveidot TV ainu (paši)
-- [ ] Integrēt virtuļu ķeršanas spēli
+Unity 2D spēle, kurā Mr. Bean tēlam iespēja ķert virtuļus.
+
+### Galvenās funkcijas:
+* **Augšanas sistēma:** Tēls palielinās ar katru pareizi apēsto virtuli.
+* **60s Taimeris:** Spēle ilgst 60 sekundes, kurā iespējams krāt vai zaudēt punktus.
+* **Dzīvību sistēma:** Sliktie virtuļi noņem dzīvības.
+
+![Spēles ekrānuzņēmums](images/gameplay.png)
+*Unity projekta fails*
+
+## 🚀 Kā palaist?
+1. Lejupielādē jaunāko versiju "Releases" sadaļā
+2. Atarhivē ar 7zip vai WinRar.
+3. Palaid MR_Bean2D.exe failu.
