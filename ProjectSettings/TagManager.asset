@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Donut
+  - Danger
   layers:
   - Default
   - TransparentFX

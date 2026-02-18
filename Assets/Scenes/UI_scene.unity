@@ -748,7 +748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -828, y: 263}
+  m_AnchoredPosition: {x: -834.6, y: 227.51001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810258608
@@ -868,7 +868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1020570013
 RectTransform:
   m_ObjectHideFlags: 0
@@ -885,7 +885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -834.6, y: 487.4}
+  m_AnchoredPosition: {x: -834.59, y: 277.51}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020570014
@@ -1609,7 +1609,6 @@ GameObject:
   - component: {fileID: 1404638842}
   - component: {fileID: 1404638844}
   - component: {fileID: 1404638845}
-  - component: {fileID: 1404638846}
   m_Layer: 0
   m_Name: ScriptHolder
   m_TagString: Untagged
@@ -1651,6 +1650,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1181c245fdfbe3c47b56420e17f4a8fb, type: 3}
   - {fileID: 8300000, guid: cc9887e1d4956fb4caa644dc80710044, type: 3}
   - {fileID: 8300000, guid: 28134c9957b4d184ead5db39bbe966a0, type: 3}
+  - {fileID: 8300000, guid: af6b3601918349c44b3030bfe3883d19, type: 3}
 --- !u!114 &1404638845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,31 +1663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33569c0121e9b94dae26900bafea36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1404638846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404638840}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f32807fd31c69a04681a4288d7e9c293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DonutBakerScript
-  donutPrefabs:
-  - {fileID: 6698063876194868998, guid: 4245fe5a57b94ca4fa8f0dba851b0768, type: 3}
-  - {fileID: 1803100452717178316, guid: 53627a7a01def7448a1af99e4f530ecb, type: 3}
-  - {fileID: 1803100452717178316, guid: 53627a7a01def7448a1af99e4f530ecb, type: 3}
-  bakeInterval: 1
-  ovenTransform: {fileID: 1948950695}
-  offset: 0.7
-  bakeButton: {fileID: 0}
-  scoreText: {fileID: 1020570014}
-  timerText: {fileID: 0}
-  timeRemaining: 60
-  lives: 3
-  livesText: {fileID: 0}
 --- !u!1 &1483694360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,7 +2341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -828, y: 213}
+  m_AnchoredPosition: {x: -595.51, y: 277.51}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1896500706
@@ -2526,9 +2501,9 @@ MonoBehaviour:
   bakeButton: {fileID: 1493052393}
   scoreText: {fileID: 1020570014}
   timerText: {fileID: 810258608}
-  timeRemaining: 60
+  livesText: {fileID: 1896500706}
   lives: 3
-  livesText: {fileID: 0}
+  timeRemaining: 60
 --- !u!1 &2064805913
 GameObject:
   m_ObjectHideFlags: 0

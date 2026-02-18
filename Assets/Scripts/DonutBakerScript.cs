@@ -14,17 +14,21 @@ public class DonutBakerScript : MonoBehaviour
     public Button bakeButton;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI livesText; // PIEVIENOTS: Dzīvību tekstam
 
-    private int score = 0;
+    [Header("Game Settings")]
+    public int lives = 3; // PIEVIENOTS: Sākuma dzīvības
     public float timeRemaining = 60f;
+    private int score = 0;
     private bool isGameRunning = false;
     private Coroutine bakingCoroutine;
+
     void Start()
     {
-        Debug.Log("Skripts ir pamodies!"); // Ja šis neparādās, skripts nav pievienots nevienam objektam
-
+        // Paslēpjam UI sākumā
         if (scoreText != null) scoreText.gameObject.SetActive(false);
         if (timerText != null) timerText.gameObject.SetActive(false);
+        if (livesText != null) livesText.gameObject.SetActive(false);
     }
 
     void Update()
@@ -38,38 +42,15 @@ public class DonutBakerScript : MonoBehaviour
             }
             else
             {
-                timeRemaining = 0;
-                UpdateTimerUI();
-                StopBaking();
+                StopBaking("LAIKS BEIDZIES!");
             }
-        }
-    }
-
-    [Header("Lives System")]
-    public int lives = 3;
-    public TextMeshProUGUI livesText;
-
-    public void LoseLife()
-    {
-        lives--;
-        if (livesText != null)
-        {
-            livesText.text = "Dzīvības: " + lives;
-        }
-
-        if (lives <= 0)
-        {
-            StopBaking();
-            if (timerText != null) timerText.text = "SPĒLE BEIGUSIES!";
         }
     }
 
     void UpdateTimerUI()
     {
         if (timerText != null)
-        {
             timerText.text = "Laiks: " + Mathf.CeilToInt(timeRemaining).ToString();
-        }
     }
 
     public void AddScore(int amount)
@@ -78,7 +59,18 @@ public class DonutBakerScript : MonoBehaviour
         if (scoreText != null) scoreText.text = "Punkti: " + score;
     }
 
-    // StartBaking jābūt tikai VIENU reizi!
+    // JAUNA FUNKCIJA: Dzīvību zaudēšanai
+    public void LoseLife()
+    {
+        lives--;
+        if (livesText != null) livesText.text = "Dzīvības: " + lives;
+
+        if (lives <= 0)
+        {
+            StopBaking("ZAUDEJI DZĪVĪBAS!");
+        }
+    }
+
     public void StartBaking()
     {
         if (!isGameRunning)
@@ -86,25 +78,34 @@ public class DonutBakerScript : MonoBehaviour
             isGameRunning = true;
             timeRemaining = 60f;
             score = 0;
+            lives = 3; // Atiestatām dzīvības
 
-            // Atjaunojam tekstus sākuma pozīcijā
             AddScore(0);
-            UpdateTimerUI();
+            if (livesText != null) livesText.text = "Dzīvības: " + lives;
 
-            // Paslēpjam pogu un parādām UI elementus
             if (bakeButton != null) bakeButton.gameObject.SetActive(false);
             if (scoreText != null) scoreText.gameObject.SetActive(true);
             if (timerText != null) timerText.gameObject.SetActive(true);
+            if (livesText != null) livesText.gameObject.SetActive(true);
 
             bakingCoroutine = StartCoroutine(Bake());
         }
     }
 
-    public void StopBaking()
+    public void StopBaking(string message)
     {
         isGameRunning = false;
         if (bakingCoroutine != null) StopCoroutine(bakingCoroutine);
-        if (timerText != null) timerText.text = "Laiks beidzies!";
+        if (timerText != null) timerText.text = message;
+
+        // Atrodam tēlu un atiestatām tā izmēru
+        CharacterControllerScript player = FindFirstObjectByType<CharacterControllerScript>();
+        if (player != null)
+        {
+            player.ResetSize();
+        }
+
+        if (bakeButton != null) bakeButton.gameObject.SetActive(true);
     }
 
     IEnumerator Bake()
